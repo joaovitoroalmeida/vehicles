@@ -1,0 +1,8 @@
+
+spring:
+  r2dbc:
+    read-write:
+      url: r2dbc:postgresql://postgres:5432/vehicles?schema=vehicles
+      user: ${DB_USER}
+      password: ${DB_PASSWORD}
+      driver: postgresql

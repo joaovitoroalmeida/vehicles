@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - '.env'
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    depends_on:
+      - postgres
+      - flyway
+
+  postgres:
+    image: postgres
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 500M
+    ports:
+      - "5432:5432"
+    env_file:
+      - '.env'
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+
+  flyway:
+    image: flyway/flyway:7.14-alpine
+    container_name: flyway
+    env_file:
+      - '.env'
+    command: -locations=filesystem:/flyway/vehicles/sql -url=jdbc:postgresql://postgres:5432/vehicles -schemas=vehicles -user=${DB_USER} -password=${DB_PASSWORD} migrate
+    volumes:
+      - ./src/main/resources/database/migration:/flyway/vehicles/sql
+    depends_on:
+      - postgres
