@@ -13,6 +13,6 @@ in the project's "collection" folder.
 To finish the application and delete the docker images, simply run the commands:
 ````shell
 docker-compose down
-docker-compose image prune --all
+docker image prune --all
 ````
 
