@@ -1,209 +1,209 @@
 {
-	"info": {
-		"_postman_id": "a3bd4a5f-15d1-4b91-8150-8a02c16001a6",
-		"name": "vehicles",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "8934380"
-	},
-	"item": [
-		{
-			"name": "Create Vehicles",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"vehicle\": \"Celta\",\r\n    \"mark\": \"Toyota\",\r\n    \"year\": 2012,\r\n    \"description\": \"Carro\",\r\n    \"color\": \"Vermelho\",\r\n    \"sold\": true\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8080/vehicles",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"vehicles"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Vehicles By Id",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"vehicle\": \"Creta\",\r\n    \"mark\": \"Nissan\",\r\n    \"year\": 2012,\r\n    \"description\": \"Carro\",\r\n    \"color\": \"Azul\",\r\n    \"sold\": true\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8080/vehicles/79420c15-aa0b-4808-a4a0-650bdc536d01",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"vehicles",
-						"79420c15-aa0b-4808-a4a0-650bdc536d01"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Patch Vehicles By Id",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"sold\": false,\r\n    \"vehicle\": \"March\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8080/vehicles/79420c15-aa0b-4808-a4a0-650bdc536d01",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"vehicles",
-						"79420c15-aa0b-4808-a4a0-650bdc536d01"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Vehicles",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8080/vehicles",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"vehicles"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Vehicles by properties",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8080/vehicles?color=Vermelho&year=2012&mark=Toyota",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"vehicles"
-					],
-					"query": [
-						{
-							"key": "color",
-							"value": "Vermelho"
-						},
-						{
-							"key": "year",
-							"value": "2012"
-						},
-						{
-							"key": "mark",
-							"value": "Toyota"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Vehicle By Id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8080/vehicles/79420c15-aa0b-4808-a4a0-650bdc536d01",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"vehicles",
-						"79420c15-aa0b-4808-a4a0-650bdc536d01"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Vehicles",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8080/vehicles/af367fb0-fa57-4a5c-875c-e4af627f1665",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"vehicles",
-						"af367fb0-fa57-4a5c-875c-e4af627f1665"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "a3bd4a5f-15d1-4b91-8150-8a02c16001a6",
+    "name": "vehicles",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8934380"
+  },
+  "item": [
+    {
+      "name": "Create Vehicles",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"vehicle\": \"Celta\",\r\n    \"mark\": \"Toyota\",\r\n    \"year\": 2012,\r\n    \"description\": \"Carro\",\r\n    \"color\": \"Vermelho\",\r\n    \"sold\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/vehicles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Vehicles By Id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"vehicle\": \"Creta\",\r\n    \"mark\": \"Nissan\",\r\n    \"year\": 2012,\r\n    \"description\": \"Carro\",\r\n    \"color\": \"Azul\",\r\n    \"sold\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/vehicles/79420c15-aa0b-4808-a4a0-650bdc536d01",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles",
+            "79420c15-aa0b-4808-a4a0-650bdc536d01"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch Vehicles By Id",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"sold\": false,\r\n    \"vehicle\": \"March\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/vehicles/79420c15-aa0b-4808-a4a0-650bdc536d01",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles",
+            "79420c15-aa0b-4808-a4a0-650bdc536d01"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Vehicles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/vehicles",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Vehicles by properties",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/vehicles?color=Vermelho&year=2012&mark=Toyota",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles"
+          ],
+          "query": [
+            {
+              "key": "color",
+              "value": "Vermelho"
+            },
+            {
+              "key": "year",
+              "value": "2012"
+            },
+            {
+              "key": "mark",
+              "value": "Toyota"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Vehicle By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/vehicles/79420c15-aa0b-4808-a4a0-650bdc536d01",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles",
+            "79420c15-aa0b-4808-a4a0-650bdc536d01"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Vehicles",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/vehicles/af367fb0-fa57-4a5c-875c-e4af627f1665",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles",
+            "af367fb0-fa57-4a5c-875c-e4af627f1665"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }

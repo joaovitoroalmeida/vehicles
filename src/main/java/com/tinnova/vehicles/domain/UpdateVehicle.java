@@ -3,7 +3,6 @@ package com.tinnova.vehicles.domain;
 import lombok.*;
 
 import java.time.Instant;
-import java.util.UUID;
 
 @Getter
 @Builder

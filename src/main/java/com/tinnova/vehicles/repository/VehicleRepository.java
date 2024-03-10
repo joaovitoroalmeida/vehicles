@@ -11,9 +11,14 @@ import java.util.UUID;
 public interface VehicleRepository {
 
     Mono<Vehicle> create(Vehicle vehicle);
+
     Mono<Void> deleteById(UUID id);
+
     Flux<Vehicle> getAll();
+
     Flux<Vehicle> getByProperties(VehicleProperties vehicleProperties);
+
     Mono<Vehicle> getById(UUID id);
+
     Mono<Void> updateById(UUID id, UpdateVehicle vehicle);
 }

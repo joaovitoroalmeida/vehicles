@@ -13,7 +13,6 @@ import reactor.core.publisher.Mono;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -58,9 +57,9 @@ public class VehicleRepositoryImpl implements VehicleRepository {
     @Override
     public Flux<Vehicle> getByProperties(VehicleProperties vehicleProperties) {
         return dbRWClient.sql(VehicleConstants.SELECT_BY_PROPERTIES)
-                .bind("mark", "%"+vehicleProperties.mark()+"%")
+                .bind("mark", "%" + vehicleProperties.mark() + "%")
                 .bind("year", vehicleProperties.year())
-                .bind("color", "%"+vehicleProperties.color()+"%")
+                .bind("color", "%" + vehicleProperties.color() + "%")
                 .map((row, rowMetadata) -> toVehicle(row))
                 .all();
     }

@@ -16,4 +16,5 @@ public record VehicleRequest(
         String color,
         @NotNull(message = "sold may not be null")
         Boolean sold
-) {}
+) {
+}

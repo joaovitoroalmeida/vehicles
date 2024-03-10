@@ -1,6 +1,5 @@
 package com.tinnova.vehicles.service;
 
-import com.tinnova.vehicles.controller.DeleteVehicleController;
 import com.tinnova.vehicles.repository.VehicleRepository;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;

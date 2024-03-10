@@ -1,7 +1,6 @@
 package com.tinnova.vehicles.service;
 
 import com.tinnova.vehicles.domain.UpdateVehicle;
-import com.tinnova.vehicles.domain.Vehicle;
 import com.tinnova.vehicles.repository.VehicleRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

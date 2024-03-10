@@ -5,6 +5,7 @@ import com.tinnova.vehicles.controller.request.VehicleRequest;
 import com.tinnova.vehicles.domain.UpdateVehicle;
 import com.tinnova.vehicles.domain.Vehicle;
 import org.springframework.stereotype.Component;
+
 import java.time.Instant;
 import java.util.UUID;
 
