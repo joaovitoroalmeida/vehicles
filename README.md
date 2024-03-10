@@ -6,6 +6,8 @@ To run the local application, simply enter the project folder and execute the co
 ````shell
 docker-compose up -d
 ````
+**Note: You must remove the command #!/bin/sh from the project's .gradlew file**
+
 With this command we will upload the database and the application, after doing this
 just make use of the API for testing using the Postman collection found
 in the project's "collection" folder.
